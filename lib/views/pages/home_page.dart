@@ -11,6 +11,7 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: SingleChildScrollView(
           child: Column(
+            // new comment
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
