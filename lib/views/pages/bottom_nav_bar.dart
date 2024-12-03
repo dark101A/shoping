@@ -13,41 +13,42 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
+  final tabs = [
+    PersistentTabConfig(
+      screen: const HomePage(),
+      item: ItemConfig(
+        icon: const Icon(Icons.home),
+        title: "Home",
+      ),
+    ),
+    PersistentTabConfig(
+      screen: const CartPage(),
+      item: ItemConfig(
+        icon: const Icon(Icons.shopping_basket),
+        title: "Cart Page",
+      ),
+    ),
+    PersistentTabConfig(
+      screen: const FavoritsPage(),
+      item: ItemConfig(
+        icon: const Icon(Icons.favorite),
+        title: "Favorits Page",
+      ),
+    ),
+    PersistentTabConfig(
+      screen: const ProfilePage(),
+      item: ItemConfig(
+        icon: const Icon(Icons.person),
+        title: "Profile Page",
+      ),
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Persistent Bottom Navigation Bar Demo',
       home: PersistentTabView(
-        tabs: [
-          PersistentTabConfig(
-            screen: HomePage(),
-            item: ItemConfig(
-              icon: Icon(Icons.home),
-              title: "Home",
-            ),
-          ),
-          PersistentTabConfig(
-            screen: CartPage(),
-            item: ItemConfig(
-              icon: Icon(Icons.shopping_basket),
-              title: "Cart Page",
-            ),
-          ),
-          PersistentTabConfig(
-            screen: FavoritsPage(),
-            item: ItemConfig(
-              icon: Icon(Icons.favorite),
-              title: "Favorits Page",
-            ),
-          ),
-          PersistentTabConfig(
-            screen: ProfilePage(),
-            item: ItemConfig(
-              icon: Icon(Icons.person),
-              title: "Profile Page",
-            ),
-          ),
-        ],
+        tabs: tabs,
         navBarBuilder: (navBarConfig) => Style1BottomNavBar(
           navBarConfig: navBarConfig,
         ),

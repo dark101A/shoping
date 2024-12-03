@@ -9,8 +9,8 @@ class ProfilePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Profile Page'),
       ),
-      body: Center(
-        child: const Text('Profile Page'),
+      body: const Center(
+        child: Text('Profile Page'),
       ),
     );
   }
