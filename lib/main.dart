@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoping/utils/app_route.dart';
 import 'package:shoping/views/pages/bottom_nav_bar.dart'; // المسار الخاص بك
 
 void main() {
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const BottomNavBar(),
+      onGenerateRoute: AppRoute.onGenerateRoute,
     );
   }
 }
